@@ -1,15 +1,25 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = { count: 1 };
+  state = { count: 0 };
 
   render() {
     return (
       <React.Fragment>
-        <span>{this.formatCount()}</span>
-        <button>Increment</button>
+        {/* adding bootstrap class as an attribute to the span element (hard coded)
+        <span className=badge m-2 badge-primary>{this.formatCount()}</span>
+        */}
+
+        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+        <button className="btn btn-secondary btn-sm">Increment</button>
       </React.Fragment>
     );
+  }
+
+  getBadgeClasses() {
+    let classes = "badge m-2 badge-";
+    classes += this.state.count === 0 ? "warning" : "primary";
+    return classes;
   }
 
   formatCount() {

@@ -15,6 +15,7 @@ class Counter extends Component {
 
         <ul>
           {this.state.tags.map((tag) => (
+            // to satisfy the browser warning , each element need to have a key attribute which is unique in that list
             <li key={tag}>{tag}</li>
           ))}
         </ul>

@@ -6,11 +6,12 @@ class Counter extends Component {
   render() {
     return (
       <React.Fragment>
+        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+
         {/* adding bootstrap class as an attribute to the span element (hard coded)
         <span className=badge m-2 badge-primary>{this.formatCount()}</span>
         */}
 
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button className="btn btn-secondary btn-sm">Increment</button>
       </React.Fragment>
     );

@@ -3,9 +3,10 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = { count: 0 };
 
-  handleIncrement() {
-    console.log("incremented", this);
-  }
+  handleIncrement = (product) => {
+    console.log(product);
+    this.setState({ count: this.state.count + 1 });
+  };
 
   render() {
     return (
@@ -17,7 +18,7 @@ class Counter extends Component {
         */}
 
         <button
-          onClick={this.handleIncrement()}
+          onClick={() => this.handleIncrement(product)}
           className="btn btn-secondary btn-sm"
         >
           Increment

@@ -8,11 +8,8 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
-        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 
         {/* adding bootstrap class as an attribute to the span element (hard coded)
@@ -25,6 +22,8 @@ class Counter extends Component {
         >
           Increment
         </button>
+
+        <button className="btn btn-danger btn-sm m-2"> Delete</button>
       </div>
     );
   }

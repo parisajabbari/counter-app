@@ -14,13 +14,7 @@ class Counters extends Component {
     return (
       <div>
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value} id={counter.id}>
-            {/*below line will add a static "title" text*/}
-            {/*<h4>Title</h4>*/}
-
-            {/*below line will add a dynamic id to each counter */}
-            <h4>Counter #{counter.id}</h4>
-          </Counter>
+          <Counter key={counter.id} value={counter.value} id={counter.id} />
         ))}
       </div>
     );
